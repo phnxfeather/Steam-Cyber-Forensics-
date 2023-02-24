@@ -6,7 +6,7 @@ The first file to be used is **"FileLists.py"**. This script will read the defau
 
 The second file to be used is **"SteamContentParser.py"**. The files found in the first script will need to be moved into a folder named "SourceFiles" once in that folder the script will move through each file and add them to a tab based on VDF, JSON, or TXT file extension. To change the name of the folder edit line #170. This line contains "in os.walks('SourceFiles')" changing the name SourceFiles will result in a search for a different folder.
 
-**Installs needed to run the files**
+**Libraries needed to run the files**
 
 * import os (default to python) <br>
 * import json (default to python) <br>
