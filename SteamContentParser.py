@@ -7,7 +7,7 @@ import xlsxwriter
 import json
 
 #Creating workbook
-workbook = xlsxwriter.Workbook('gaming_center_data.xlsx')
+workbook = xlsxwriter.Workbook('steam_data.xlsx')
 #Creating formating to add to header cell
 cell_format = workbook.add_format({'bold':True})
 
