@@ -70,7 +70,7 @@ Modify the lines to read db_line_constant = 1 and db_header = 10
 #Tracking line number in VDF tab
 vdf_line_constant = 1
 #Tracking VDF header size
-db_reader = 10
+vdf_reader = 10
 #Tracking line number in DB tab
 db_line_constant = 1
 #Tracking db header size
