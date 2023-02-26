@@ -164,3 +164,47 @@ def db_parser(file_path,filename):
             db_line_constant += 1
             line_count += 1
 ```
+**Block 4**
+```
+def parser_builder():
+    #Looks for a folder called 'Source Files' in the same directory as the Python script
+    for dir_path, dir_names, filenames in os.walk('SourceFiles'):
+        #Loops through all the files found
+        for filename in filenames:
+            #Creates path and filename variable
+            file_path = os.path.join(dir_path, filename)
+
+            #Checks if JSON file and passes it to the JSON parser
+            if '.json' in file_path:
+                json_parser(file_path,filename)
+            #Checks if txt file and passes it to the txt parser
+            elif '.txt' in file_path:
+                txt_parser(file_path,filename)
+            #Checks if VDF file and passes it to the VDF parser
+            elif '.vdf' in file_path:
+                vdf_parser(file_path,filename)
+            #Checks for any other file
+            else:
+                print('Found an unknown file.')
+```
+**<div align="center">Modifying Block 4</div>**
+
+To edit this block add another elif statement under the statement elif '.vdf.'.... and ensure the else: statement is last
+
+<div align="center">Example:</div> <br>
+
+```
+#Checks if VDF file and passes it to the VDF parser
+            elif '.vdf' in file_path:
+                vdf_parer(file_path,filename)
+#Checks if Database file and passes it to the Database parser
+            elif '.db' in file_path:
+                db_parser(file_path,filename)
+            #Checks for any other file
+            else:
+                print('Found an unknown file.')
+```
+
+**<div align="center">Notes</div>**
+
+Please ensure comments are changed to reflect appropriate changes to track what file is being added or modified
