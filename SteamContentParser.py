@@ -7,7 +7,7 @@ import xlsxwriter
 import json
 
 #Creating workbook
-workbook = xlsxwriter.Workbook('gaming_center_data.xlsx')
+workbook = xlsxwriter.Workbook('steam_data.xlsx')
 #Creating formating to add to header cell
 cell_format = workbook.add_format({'bold':True})
 
@@ -134,7 +134,7 @@ def txt_parser(file_path,filename):
             line_count += 1
 
 #Parsing VDF files
-def vdf_parer(file_path,filename):
+def vdf_parser(file_path,filename):
     #Opening VDF files as binary
     with open(file_path,'rb') as my_file:
         #Declaring variables as global
@@ -181,7 +181,7 @@ def parser_builder():
                 txt_parser(file_path,filename)
             #Checks if VDF file and passes it to the VDF parser
             elif '.vdf' in file_path:
-                vdf_parer(file_path,filename)
+                vdf_parser(file_path,filename)
             #Checks for any other file
             else:
                 print('Found an unknown file.')
